@@ -377,6 +377,17 @@
     {
       "kind": "journal",
       "region": "dom",
+      "year": 2025,
+      "title": "미래 전력망을 위한 전력 케이블 진단기술의 발전 동향",
+      "venue": "전기의세계 (대한전기학회지, 기고)",
+      "when": "vol. 74, no. 12, Dec. 2025",
+      "authors": "장승진",
+      "jcr": "",
+      "url": "https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12492071"
+    },
+    {
+      "kind": "journal",
+      "region": "dom",
       "year": 2023,
       "title": "반사파 계측법 기반의 케이블 전파 상수 추정 및 절연 성능 평가 기법",
       "venue": "전기학회논문지",
