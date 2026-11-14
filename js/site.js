@@ -136,7 +136,8 @@
   // 작은 사진은 tools/make_thumbs.py 로 만든다.
   const thumb = (p) => esc('media/thumb/' + String(p || '').replace(/^\/?media\//, '') + '.jpg');
   // data/*.json 은 { "items": [ … ] } 모양이다(Pages CMS가 항목 제목을 보여 주려면 목록이 칸 하나에 담겨야 한다).
-  const load = (name) => fetch('data/' + name + '.json').then((r) => { if (!r.ok) throw new Error(name + '.json ' + r.status); return r.json(); }).then((j) => (Array.isArray(j) ? j : j.items || []));
+  // cache: 'no-cache' = 열 때마다 서버에 새 내용이 있는지 묻는다. 없으면 브라우저가 10분 동안 예전 목록을 보여 준다.
+  const load = (name) => fetch('data/' + name + '.json', { cache: 'no-cache' }).then((r) => { if (!r.ok) throw new Error(name + '.json ' + r.status); return r.json(); }).then((j) => (Array.isArray(j) ? j : j.items || []));
   const fill = (fn) => document.querySelectorAll('[data-n]').forEach((el) => { el.textContent = fn(el.dataset.n); });
   const CLOSE = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"></path></svg>';
   const PI = ['Seung Jin Chang', '장승진'];   // 교수님 이름(논문 목록에서 굵게 표시). 나머지 구성원은 members.json 에서 읽는다.
