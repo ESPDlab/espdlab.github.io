@@ -1,6 +1,9 @@
 # Pages CMS(https://pagescms.org) 설정.
 # app.pagescms.org 에서 이 저장소를 열면 아래 네 목록(소식, 구성원, 과제, 논문)이 입력 화면으로 나온다.
 # 저장하면 data/*.json 과 media/ 가 커밋되고, 1~2분 뒤 홈페이지에 반영된다.
+#
+# 각 data/*.json 은 { "items": [ … ] } 모양이다. 목록을 items 라는 칸 하나에 담아야
+# Pages CMS가 접힌 항목마다 제목(summary)을 보여 준다. 파일 맨 위에 바로 목록을 두면 "Item #1" 로만 나온다.
 
 media:
   input: media
@@ -12,136 +15,152 @@ content:
     type: file
     path: data/news.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{date} · {title}"
     fields:
-      - { name: title, label: 제목, type: string, required: true }
-      - { name: date, label: 날짜, type: date, required: true }
-      - name: category
-        label: 분류
-        type: select
-        required: true
-        options:
-          values:
-            - { value: academic, label: 학술활동 }
-            - { value: life, label: 연구실 생활 }
-            - { value: field, label: 연구현장 }
-            - { value: award, label: 수상·선정 }
-      - { name: body, label: 내용, type: text, description: "카드를 눌렀을 때 사진 아래에 보이는 글. 비워도 된다." }
-      - name: photos
-        label: 사진
-        type: image
-        description: "첫 장이 대표 사진이다. 올리기 전에 긴 변을 1600px 이하로 줄인다."
-        options:
-          multiple: true
-          path: media/news
+      - name: items
+        label: 소식 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date} · {title}"
+        fields:
+          - { name: title, label: 제목, type: string, required: true }
+          - { name: date, label: 날짜, type: date, required: true }
+          - name: category
+            label: 분류
+            type: select
+            required: true
+            options:
+              values:
+                - { value: academic, label: 학술활동 }
+                - { value: life, label: 연구실 생활 }
+                - { value: field, label: 연구현장 }
+                - { value: award, label: 수상·선정 }
+          - { name: body, label: 내용, type: text, description: "카드를 눌렀을 때 사진 아래에 보이는 글. 비워도 된다." }
+          - name: photos
+            label: 사진
+            type: image
+            description: "첫 장이 대표 사진이다. 올리기 전에 긴 변을 2000px 이하로 줄인다."
+            options:
+              multiple: true
+              path: media/news
 
   - name: members
     label: 구성원
     type: file
     path: data/members.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{name} · {roleKo}"
     fields:
-      - name: group
-        label: 구분
-        type: select
-        required: true
-        description: "화면에서 이 구분별로 묶여 나온다. 졸업하면 '졸업생'으로 바꾼다."
-        options:
-          values:
-            - { value: postdoc, label: 박사후연구원 }
-            - { value: phd, label: 박사과정 }
-            - { value: ms, label: 석사과정 }
-            - { value: undergrad, label: 학부 연구생 }
-            - { value: alumni, label: 졸업생 }
-      - { name: name, label: 이름, type: string, required: true }
-      - { name: nameEn, label: 영문 이름, type: string, description: "논문에 쓰는 표기 그대로 적는다(예: Jae-Hyun Ryu). 논문 화면에서 이 이름이 굵게 표시된다." }
-      - { name: roleKo, label: 직함 (한국어), type: string, description: "예: 석사과정, 졸업생 · 석사" }
-      - { name: roleEn, label: 직함 (영어), type: string, description: "예: M.S. Student, Alumni · M.S." }
-      - { name: interests, label: 관심 분야, type: text }
-      - { name: noteKo, label: 근황 (한국어), type: string, description: "졸업생의 현재 소속 등. 관심 분야가 비어 있을 때 그 자리에 보인다." }
-      - { name: noteEn, label: 근황 (영어), type: string }
-      - { name: email, label: 이메일, type: string }
-      - name: photo
-        label: 사진
-        type: image
-        description: "세로 사진(3:4)이 알맞다."
-        options:
-          path: media/people
-      - { name: career, label: 경력, type: string, list: true }
-      - { name: publications, label: 논문, type: text, list: true, description: "한 칸에 한 편. 본인 이름은 자동으로 굵게 표시된다." }
-      - { name: projects, label: 수행 과제, type: string, list: true }
-      - { name: awards, label: 수상 이력, type: string, list: true }
+      - name: items
+        label: 구성원 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{name} · {roleKo}"
+        fields:
+          - name: group
+            label: 구분
+            type: select
+            required: true
+            description: "화면에서 이 구분별로 묶여 나온다. 졸업하면 '졸업생'으로 바꾼다."
+            options:
+              values:
+                - { value: postdoc, label: 박사후연구원 }
+                - { value: phd, label: 박사과정 }
+                - { value: ms, label: 석사과정 }
+                - { value: undergrad, label: 학부 연구생 }
+                - { value: alumni, label: 졸업생 }
+          - { name: name, label: 이름, type: string, required: true }
+          - { name: nameEn, label: 영문 이름, type: string, description: "논문에 쓰는 표기 그대로 적는다(예: Jae-Hyun Ryu). 논문 화면에서 이 이름이 굵게 표시된다." }
+          - { name: roleKo, label: 직함 (한국어), type: string, description: "예: 석사과정, 졸업생 · 석사" }
+          - { name: roleEn, label: 직함 (영어), type: string, description: "예: M.S. Student, Alumni · M.S." }
+          - { name: interests, label: 관심 분야, type: text }
+          - { name: noteKo, label: 근황 (한국어), type: string, description: "졸업생의 현재 소속 등. 관심 분야가 비어 있을 때 그 자리에 보인다." }
+          - { name: noteEn, label: 근황 (영어), type: string }
+          - { name: email, label: 이메일, type: string }
+          - name: photo
+            label: 사진
+            type: image
+            description: "세로 사진(3:4)이 알맞다."
+            options:
+              path: media/people
+          - { name: career, label: 경력, type: string, list: true }
+          - { name: publications, label: 논문, type: text, list: true, description: "한 칸에 한 편. 본인 이름은 자동으로 굵게 표시된다." }
+          - { name: projects, label: 수행 과제, type: string, list: true }
+          - { name: awards, label: 수상 이력, type: string, list: true }
 
   - name: projects
     label: 과제
     type: file
     path: data/projects.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{start} · {title}"
     fields:
-      - { name: title, label: 과제명, type: text, required: true }
-      - { name: org, label: 지원 기관, type: string, required: true }
-      - { name: program, label: 사업명, type: string, description: "예: 기초연구사업(중견연구). 없으면 비운다." }
-      - name: start
-        label: 시작 연월
-        type: string
-        description: "2026.03 형식. 모르면 비운다."
-        pattern: { regex: "^(\\d{4}\\.\\d{2})?$", message: "2026.03 처럼 연도 네 자리, 점, 월 두 자리로 적어 주세요." }
-      - name: end
-        label: 종료 연월
-        type: string
-        description: "2028.02 형식. 이번 달 이후면 '진행 중', 지났거나 비어 있으면 '완료'로 자동 분류된다."
-        pattern: { regex: "^(\\d{4}\\.\\d{2})?$", message: "2028.02 처럼 연도 네 자리, 점, 월 두 자리로 적어 주세요." }
-      - { name: amount, label: 연구비, type: string, description: "예: 50,000,000원. 없으면 비운다." }
-      - name: logo
-        label: 기관 로고
-        type: image
-        description: "이미 올라와 있는 로고는 media/logos 에서 고른다."
-        options:
-          path: media/logos
-      - { name: abbr, label: 약칭, type: string, description: "로고가 없을 때 로고 자리에 대신 보이는 글자(예: KDHC)." }
+      - name: items
+        label: 과제 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{start} · {title}"
+        fields:
+          - { name: title, label: 과제명, type: text, required: true }
+          - { name: org, label: 지원 기관, type: string, required: true }
+          - { name: program, label: 사업명, type: string, description: "예: 기초연구사업(중견연구). 없으면 비운다." }
+          - name: start
+            label: 시작 연월
+            type: string
+            description: "2026.03 형식. 모르면 비운다."
+            pattern: { regex: "^(\\d{4}\\.\\d{2})?$", message: "2026.03 처럼 연도 네 자리, 점, 월 두 자리로 적어 주세요." }
+          - name: end
+            label: 종료 연월
+            type: string
+            description: "2028.02 형식. 이번 달 이후면 '진행 중', 지났거나 비어 있으면 '완료'로 자동 분류된다."
+            pattern: { regex: "^(\\d{4}\\.\\d{2})?$", message: "2028.02 처럼 연도 네 자리, 점, 월 두 자리로 적어 주세요." }
+          - { name: amount, label: 연구비, type: string, description: "예: 50,000,000원. 없으면 비운다." }
+          - name: logo
+            label: 기관 로고
+            type: image
+            description: "이미 올라와 있는 로고는 media/logos 에서 고른다."
+            options:
+              path: media/logos
+          - { name: abbr, label: 약칭, type: string, description: "로고가 없을 때 로고 자리에 대신 보이는 글자(예: KDHC)." }
 
   - name: publications
     label: 논문·특허
     type: file
     path: data/publications.json
     format: json
-    list:
-      collapsible:
-        collapsed: true
-        summary: "{year} · {title}"
     fields:
-      - name: kind
-        label: 종류
-        type: select
-        required: true
-        options:
-          values:
-            - { value: journal, label: 저널 }
-            - { value: conf, label: 학회 }
-            - { value: patent, label: 특허 }
-      - name: region
-        label: 국내외
-        type: select
-        required: true
-        options:
-          values:
-            - { value: intl, label: 국외 }
-            - { value: dom, label: 국내 }
-      - { name: year, label: 연도, type: number, required: true, description: "연도별 막대와 정렬에 쓰인다." }
-      - { name: title, label: 제목, type: text, required: true }
-      - { name: venue, label: 학술지·학회, type: string, description: "특허는 상태를 적는다(예: 국내 출원 등록)." }
-      - { name: when, label: 권·호·시기, type: string, description: "예: vol. 74, Sep. 2025 / 특허는 출원번호와 시기." }
-      - { name: authors, label: 저자, type: text, required: true, description: "쉼표와 한 칸으로 나눈다. 제1저자 앞에 ¹, 교신저자 앞에 * 를 붙인다." }
-      - { name: jcr, label: JCR 상위 %, type: string, description: "예: 24.1%. 없으면 비운다." }
-      - { name: url, label: 링크, type: string, description: "논문 페이지 주소. 없으면 비운다." }
+      - name: items
+        label: 논문·특허 목록
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{year} · {title}"
+        fields:
+          - name: kind
+            label: 종류
+            type: select
+            required: true
+            options:
+              values:
+                - { value: journal, label: 저널 }
+                - { value: conf, label: 학회 }
+                - { value: patent, label: 특허 }
+          - name: region
+            label: 국내외
+            type: select
+            required: true
+            options:
+              values:
+                - { value: intl, label: 국외 }
+                - { value: dom, label: 국내 }
+          - { name: year, label: 연도, type: number, required: true, description: "연도별 막대와 정렬에 쓰인다." }
+          - { name: title, label: 제목, type: text, required: true }
+          - { name: venue, label: 학술지·학회, type: string, description: "특허는 상태를 적는다(예: 국내 출원 등록)." }
+          - { name: when, label: 권·호·시기, type: string, description: "예: vol. 74, Sep. 2025 / 특허는 출원번호와 시기." }
+          - { name: authors, label: 저자, type: text, required: true, description: "쉼표와 한 칸으로 나눈다. 제1저자 앞에 ¹, 교신저자 앞에 * 를 붙인다." }
+          - { name: jcr, label: JCR 상위 %, type: string, description: "예: 24.1%. 없으면 비운다." }
+          - { name: url, label: 링크, type: string, description: "논문 페이지 주소. 없으면 비운다." }

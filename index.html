@@ -16,18 +16,18 @@
 <link rel="stylesheet" href="css/site.css">
 <style>
 /* 첫 화면: 그림이 화면을 꽉 채우고, 글은 그 위 왼쪽에 얹는다. .hero-lit 은 전력망을 밝게 그린 같은 그림으로, 포인터 둘레만 드러난다(js/site.js 의 glow). */
-.hero{position:relative;aspect-ratio:16/9;overflow:hidden}
+.hero{position:relative;aspect-ratio:16/9;max-height:calc(100svh - 44px);overflow:hidden}
 .hero-stage{position:absolute;inset:0}
 .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%}
 .hero-lit{--mx:70%;--my:45%;-webkit-mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
-.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:var(--space-sm);width:100%;max-width:var(--content-text);margin:0 auto;padding:10% var(--space-lg) 0;box-sizing:border-box;text-align:left;pointer-events:none}
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:var(--space-sm);width:100%;max-width:var(--content-text);margin:0 auto;padding:0 var(--space-lg);box-sizing:border-box;text-align:left;pointer-events:none}
 .hero-copy > *{margin:0;max-width:480px}
 .hero-copy a{pointer-events:auto}
 .hero-credit{position:absolute;right:var(--space-sm);bottom:var(--space-xs);margin:0;color:var(--body-muted);opacity:.7}
 .hero-credit a{color:inherit}
 @media (min-width:1029px){.hero-copy{padding-left:0;padding-right:0}}
 @media (max-width:900px){
-.hero{aspect-ratio:auto;display:flex;flex-direction:column-reverse}
+.hero{aspect-ratio:auto;max-height:none;display:flex;flex-direction:column-reverse}
 .hero-stage{position:relative;inset:auto;aspect-ratio:4/3}
 .hero-lit{-webkit-mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
 .hero-copy{position:static;padding:var(--space-xxl) var(--space-lg)}
