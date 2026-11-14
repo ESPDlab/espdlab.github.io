@@ -15,11 +15,13 @@
 <link rel="stylesheet" href="css/bundle.css">
 <link rel="stylesheet" href="css/site.css">
 <style>
-/* 첫 화면: 그림이 화면을 꽉 채우고, 글은 그 위 왼쪽에 얹는다. .hero-lit 은 전력망을 밝게 그린 같은 그림으로, 포인터 둘레만 드러난다(js/site.js 의 glow). */
-.hero{position:relative;aspect-ratio:16/9;max-height:calc(100svh - 44px);overflow:hidden}
+/* 첫 화면: 그림이 화면을 꽉 채우고, 글은 그 위 왼쪽에 얹는다. .hero-lit 은 전력망을 밝게 그린 같은 그림으로, 동그란 창(.hero-glow) 안에서만 보인다. 창을 옮기는 일은 js/site.js 의 glow 가 한다. */
+.hero{position:relative;width:100%;height:min(56.25vw,calc(100svh - 44px));overflow:hidden}
 .hero-stage{position:absolute;inset:0}
 .hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%}
-.hero-lit{--mx:70%;--my:45%;-webkit-mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
+.hero-glow{position:absolute;left:0;top:0;width:42vw;height:42vw;margin:-21vw 0 0 -21vw;overflow:hidden;visibility:hidden;will-change:transform;-webkit-mask-image:radial-gradient(circle closest-side,#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle closest-side,#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
+.hero-glow.on{visibility:visible}
+.hero-glow .hero-lit{inset:auto;left:0;top:0;max-width:none;will-change:transform}
 .hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:var(--space-sm);width:100%;max-width:var(--content-text);margin:0 auto;padding:0 var(--space-lg);box-sizing:border-box;text-align:left;pointer-events:none}
 .hero-copy > *{margin:0;max-width:480px}
 .hero-copy a{pointer-events:auto}
@@ -27,9 +29,9 @@
 .hero-credit a{color:inherit}
 @media (min-width:1029px){.hero-copy{padding-left:0;padding-right:0}}
 @media (max-width:900px){
-.hero{aspect-ratio:auto;max-height:none;display:flex;flex-direction:column-reverse}
+.hero{height:auto;display:flex;flex-direction:column-reverse}
 .hero-stage{position:relative;inset:auto;aspect-ratio:4/3}
-.hero-lit{-webkit-mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
+.hero-glow{width:60vw;height:60vw;margin:-30vw 0 0 -30vw}
 .hero-copy{position:static;padding:var(--space-xxl) var(--space-lg)}
 .hero-copy .hero-display{font-size:34px}
 .hero-copy .lead{font-size:21px}
@@ -43,7 +45,7 @@
 <section class="hero" data-surface="black">
 <div class="hero-stage">
 <img class="hero-art" src="media/hero.jpg" alt="우주에서 내려다본 밤의 한반도와 빛나는 전력망">
-<img class="hero-art hero-lit" src="media/hero-lit.jpg" alt="" aria-hidden="true">
+<div class="hero-glow" aria-hidden="true"><img class="hero-art hero-lit" src="media/hero-lit.jpg" alt=""></div>
 </div>
 <div class="hero-copy">
 <h1 class="hero-display">Energy System<br>Prognostics &amp;<br>Diagnostics Lab</h1>

@@ -5,7 +5,7 @@
 [data-lang="ko"] [lang="en"], [data-lang="en"] [lang="ko"] { display: none !important; }
 
 /* GlobalNav의 로고 */
-.site-logo { display: block; height: 15px; width: auto; }
+.site-logo { display: block; height: 28px; width: auto; }
 
 /* 같은 줄의 카드 높이를 맞춘다 */
 .lab-grid.eq { align-items: stretch; }

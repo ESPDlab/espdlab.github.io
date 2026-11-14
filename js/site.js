@@ -80,6 +80,7 @@
     if (d.matches(':modal')) return;
     d.close();
     d.showModal();
+    d.querySelectorAll('img[data-full]').forEach((i) => { if (i.getAttribute('src') !== i.dataset.full) i.src = i.dataset.full; });   // 열면 작은 사진을 큰 사진으로 바꾼다
     d.scrollTop = 0;
     const strip = d.querySelector('.strip');
     if (strip) strip.scrollLeft = 0;
@@ -131,6 +132,9 @@
   /* ── 4. 목록 화면 ── */
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const src = (p) => esc(String(p || '').replace(/^\//, ''));      // "/media/a.jpg" 와 "media/a.jpg" 를 모두 받는다
+  // 목록에서는 작은 사진(media/thumb/… 에 같은 이름 + ".jpg")을 먼저 보여 준다. 작은 사진이 없으면 원래 사진이 대신 나온다.
+  // 작은 사진은 tools/make_thumbs.py 로 만든다.
+  const thumb = (p) => esc('media/thumb/' + String(p || '').replace(/^\/?media\//, '') + '.jpg');
   // data/*.json 은 { "items": [ … ] } 모양이다(Pages CMS가 항목 제목을 보여 주려면 목록이 칸 하나에 담겨야 한다).
   const load = (name) => fetch('data/' + name + '.json').then((r) => { if (!r.ok) throw new Error(name + '.json ' + r.status); return r.json(); }).then((j) => (Array.isArray(j) ? j : j.items || []));
   const fill = (fn) => document.querySelectorAll('[data-n]').forEach((el) => { el.textContent = fn(el.dataset.n); });
@@ -147,7 +151,7 @@
       return `<article class="cell" data-c="${esc(n.category)}">
 <dialog open class="lab-card lift xcard" aria-label="${esc(n.title)}">
 <button class="lab-btn lab-btn-icon xclose when-open" type="button" aria-label="Close"></button>
-${photos.length || videos.length ? `<div class="carousel${many ? '' : ' single'} above"><div class="strip">${photos.map((p) => `<img src="${src(p)}" alt="" loading="lazy">`).join('')}${videos.map((v) => `<video src="${src(v)}#t=0.1" controls playsinline preload="metadata"></video>`).join('')}</div>${many ? '<button class="lab-btn lab-btn-icon nav prev" type="button" aria-label="Previous photo"></button><button class="lab-btn lab-btn-icon nav next" type="button" aria-label="Next photo"></button>' : ''}</div>` : ''}
+${photos.length || videos.length ? `<div class="carousel${many ? '' : ' single'} above"><div class="strip">${photos.map((p) => `<img src="${thumb(p)}" data-full="${src(p)}" alt="" loading="lazy" decoding="async" onerror="this.onerror=null;this.src=this.dataset.full">`).join('')}${videos.map((v) => `<video src="${src(v)}#t=0.1" controls playsinline preload="metadata"></video>`).join('')}</div>${many ? '<button class="lab-btn lab-btn-icon nav prev" type="button" aria-label="Previous photo"></button><button class="lab-btn lab-btn-icon nav next" type="button" aria-label="Next photo"></button>' : ''}</div>` : ''}
 <h3 class="body-strong clamp2" style="margin-top: var(--space-md); min-height: 42px"><button class="stretch" type="button">${esc(n.title)}</button></h3>
 <p class="lab-card-meta caption lab-muted">${esc(String(n.date).replace(/-/g, '. '))}${photos.length > 1 ? t(` · 사진 ${photos.length}장`, ` · ${photos.length} photos`) : ''}${videos.length ? t(` · 영상 ${videos.length}개`, ` · ${videos.length} video${videos.length > 1 ? 's' : ''}`) : ''}</p>
 ${n.body ? `<p class="body when-open" style="margin-top: var(--space-sm); white-space: pre-line">${esc(n.body)}</p>` : ''}
@@ -295,14 +299,31 @@ ${lists.map(([k, ko, en]) => `<section>
     }, { threshold: 0.3 }).observe(v);
   }
 
-  // 전력망 불빛: 밝게 그린 그림(.hero-lit)을 포인터 둘레만 동그랗게 드러낸다(CSS mask). 포인터가 쉬면 불빛이 한반도 위를 천천히 돈다.
-  function glow(lit) {
-    if (still || !window.IntersectionObserver) return;
-    let x = 0.7, y = 0.45, tx = x, ty = y, moved = -1e9, seen = false, raf = 0;
-    lit.parentElement.parentElement.addEventListener('pointermove', (e) => {
-      const r = lit.getBoundingClientRect();
-      tx = (e.clientX - r.left) / r.width;
-      ty = (e.clientY - r.top) / r.height;
+  // 전력망 불빛: 밝게 그린 그림을 동그란 창(.hero-glow)으로만 드러낸다. 포인터가 쉬면 불빛이 한반도 위를 천천히 돈다.
+  // 창은 한쪽으로, 창 안의 그림은 그 반대쪽으로 같은 만큼 옮긴다(transform). 그러면 그림은 제자리에 있고 창만 움직이는 것처럼 보인다.
+  // transform 만 바꾸므로 브라우저가 매번 다시 그리지 않아 가볍다.
+  function glow(win) {
+    const stage = win.parentElement, lit = win.firstElementChild;
+    let W = 1, H = 1, r = 0, x = 0.7, y = 0.5;
+    const place = () => {
+      const cx = Math.round(x * W), cy = Math.round(y * H);
+      win.style.transform = `translate3d(${cx}px,${cy}px,0)`;
+      lit.style.transform = `translate3d(${r - cx}px,${r - cy}px,0)`;
+    };
+    const size = () => {
+      W = stage.clientWidth; H = stage.clientHeight; r = win.offsetWidth / 2;
+      lit.style.width = W + 'px'; lit.style.height = H + 'px';
+      place();
+    };
+    size();
+    window.addEventListener('resize', size);
+    win.classList.add('on');
+    if (still || !window.IntersectionObserver) return;       // 움직임 줄이기를 켠 사람에게는 불빛이 한자리에 머문다
+    let tx = x, ty = y, moved = -1e9, seen = false, raf = 0;
+    stage.parentElement.addEventListener('pointermove', (e) => {
+      const b = stage.getBoundingClientRect();
+      tx = (e.clientX - b.left) / b.width;
+      ty = (e.clientY - b.top) / b.height;
       moved = performance.now();
     });
     const tick = (now) => {
@@ -312,14 +333,13 @@ ${lists.map(([k, ko, en]) => `<section>
       }
       x += (tx - x) * 0.08;
       y += (ty - y) * 0.08;
-      lit.style.setProperty('--mx', (x * 100).toFixed(2) + '%');
-      lit.style.setProperty('--my', (y * 100).toFixed(2) + '%');
+      place();
       raf = seen ? requestAnimationFrame(tick) : 0;
     };
     new IntersectionObserver(([e]) => {
       seen = e.isIntersecting;
       if (seen && !raf) raf = requestAnimationFrame(tick);
-    }).observe(lit);
+    }).observe(stage);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
@@ -332,6 +352,6 @@ ${lists.map(([k, ko, en]) => `<section>
       });
     });
     document.querySelectorAll('video[data-autoplay]').forEach(autoplay);
-    document.querySelectorAll('.hero-lit').forEach(glow);
+    document.querySelectorAll('.hero-glow').forEach(glow);
   });
 })();
