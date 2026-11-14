@@ -1,0 +1,4 @@
+[out:json][timeout:300];
+(area["ISO3166-1"="KR"][admin_level=2];area["ISO3166-1"="KP"][admin_level=2];)->.a;
+nwr["power"~"^(substation|plant)$"](area.a);
+out tags center;

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · ESPD Lab</title>
+<meta name="description" content="ESPD 연구실이 수행했거나 수행하고 있는 연구 과제.">
+<meta property="og:title" content="Projects · ESPD Lab">
+<meta property="og:description" content="ESPD 연구실이 수행했거나 수행하고 있는 연구 과제.">
+<meta property="og:image" content="https://espdlab.github.io/media/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Noto+Sans+KR:wght@300;400;600&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.plogo-img{display:block;width:100%;height:120px;margin:var(--space-sm) 0;object-fit:contain}
+</style>
+<script src="js/site.js"></script>
+</head>
+<body>
+<site-header></site-header>
+<div class="lab-subnav">
+<div class="lab-subnav-inner">
+<p class="lab-subnav-title tagline">Projects</p>
+<ul class="lab-subnav-links button-utility">
+<li><a href="research.html">Research</a></li>
+<li><a href="publications.html">Publication</a></li>
+</ul>
+<a class="lab-btn lab-btn-primary button-utility" href="contact.html"><span lang="ko">과제 문의</span><span lang="en">Contact</span></a>
+</div>
+</div>
+
+<main>
+<section class="lab-tile" data-surface="canvas">
+<h1 class="display-lg"><span lang="ko">연구 과제</span><span lang="en">Research Projects</span></h1>
+<p class="lab-tile-lead lead"><span lang="ko">연구실이 수행했거나 수행하고 있는 과제를 소개합니다.</span><span lang="en">Completed and ongoing projects of our lab.</span></p>
+</section>
+
+<section data-surface="parchment" style="padding: var(--space-section) 0">
+<div class="lab-row" role="group" aria-label="Filter by status" style="justify-content: center; padding-top: 0; padding-bottom: 0">
+<button class="lab-chip caption" type="button" aria-pressed="true" data-key="status" data-val="all"><span lang="ko">전체</span><span lang="en">All</span> <span class="lab-muted" data-n="all"></span></button>
+<button class="lab-chip caption" type="button" aria-pressed="false" data-key="status" data-val="on"><span lang="ko">진행 중</span><span lang="en">Ongoing</span> <span class="lab-muted" data-n="on"></span></button>
+<button class="lab-chip caption" type="button" aria-pressed="false" data-key="status" data-val="done"><span lang="ko">완료</span><span lang="en">Past</span> <span class="lab-muted" data-n="done"></span></button>
+</div>
+
+<div id="project-list"></div>
+</section>
+</main>
+<site-footer></site-footer>
+</body>
+</html>

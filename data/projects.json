@@ -1,0 +1,332 @@
+[
+  {
+    "title": "컨버터 기반 활선 DC 케이블 이상 탐지 실시간 모니터링 시스템 개발",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2026.10",
+    "end": "2028.03",
+    "amount": "140,864,261원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "HVDC 및 대용량 송전 선로의 실시간 이상 탐지를 위한 능동형 비접촉식 센서 및 진단 알고리즘 개발",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "기초연구사업(핵심연구-기본연구B)",
+    "start": "2026.09",
+    "end": "2027.08",
+    "amount": "62,855,000원",
+    "logo": "/media/logos/nrf.png",
+    "abbr": ""
+  },
+  {
+    "title": "감지선 단선 위치 측정 정확도 향상 방안 연구",
+    "org": "Korea District Heating Corporation (KDHC)",
+    "program": "",
+    "start": "2026.08",
+    "end": "2028.02",
+    "amount": "160,458,200원",
+    "logo": "",
+    "abbr": "KDHC"
+  },
+  {
+    "title": "비가교 올레핀계 공중합체 기반 해상풍력용 66kV 이상급 웻타입 인터어레이 전력케이블제조 기술 개발",
+    "org": "Korea Planning & Evaluation Institute of Industrial Technology",
+    "program": "",
+    "start": "2026.07",
+    "end": "2030.12",
+    "amount": "1,075,000,000원",
+    "logo": "/media/logos/keit.png",
+    "abbr": ""
+  },
+  {
+    "title": "PV 직류 직렬 아크 탐지 시스템 개발",
+    "org": "Korea Research Institute of Standards and Science (KRISS)",
+    "program": "",
+    "start": "2026.01",
+    "end": "2026.12",
+    "amount": "50,000,000원",
+    "logo": "/media/logos/kriss.png",
+    "abbr": ""
+  },
+  {
+    "title": "실시간 고장구간 및 고장점탐지 하드웨어 장치사양 검토 및 상세 설계",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2025.11",
+    "end": "2027.04",
+    "amount": "225,000,000원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "AI 기반 발전소 특고압 케이블 예측 진단 시스템 개발",
+    "org": "Korea Western Power Co., Ltd.",
+    "program": "",
+    "start": "2025.10",
+    "end": "2027.01",
+    "amount": "437,000,000원",
+    "logo": "/media/logos/kowepo.png",
+    "abbr": ""
+  },
+  {
+    "title": "Noise-Resistant 활선상태 케이블 진단 기술 개발",
+    "org": "Samsung Electronics Co., Ltd",
+    "program": "",
+    "start": "2025.03",
+    "end": "2026.12",
+    "amount": "214,500,000원",
+    "logo": "/media/logos/samsung.png",
+    "abbr": ""
+  },
+  {
+    "title": "정전없는 Energy Grid 구축을 위한, 정전이 필요없는 AI 기반 반사파 계측법이 적용된 IoT 진단기기 및 구독형 플랫폼 서비스",
+    "org": "Tech Incubator Program for Startup (TIPS)",
+    "program": "",
+    "start": "2025.06",
+    "end": "2028.05",
+    "amount": "2,000,000,000원",
+    "logo": "/media/logos/tips.png",
+    "abbr": ""
+  },
+  {
+    "title": "해상풍력용 Wet Type 해저케이블 열화 검출을위한 반사파 활용 진단 기술 개발",
+    "org": "Korea Energy Technology Evaluation and Planning (KETEP)",
+    "program": "",
+    "start": "2024.07",
+    "end": "2028.06",
+    "amount": "536,000,000원",
+    "logo": "/media/logos/ketep.png",
+    "abbr": ""
+  },
+  {
+    "title": "무탄소 융합 에너지시스템 혁신인재 교육연구단",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "4단계 BK21",
+    "start": "2025.03",
+    "end": "2027.08",
+    "amount": "",
+    "logo": "/media/logos/bk21.png",
+    "abbr": ""
+  },
+  {
+    "title": "노후 풍력발전시스템 안전관리를 위한 위험요소발굴 및 안전등급 판정 기준 도출",
+    "org": "Korea Electrical Safety Corporation (KESCO)",
+    "program": "",
+    "start": "2026.05",
+    "end": "2026.10",
+    "amount": "50,000,000원",
+    "logo": "/media/logos/kesco.png",
+    "abbr": ""
+  },
+  {
+    "title": "임베디드 시스템을 활용한 유도초음파 기반 배관 진단 신기술 현장 적용 및 실증",
+    "org": "Daejeon Technopark (대전TP)",
+    "program": "",
+    "start": "2024.10",
+    "end": "2025.10",
+    "amount": "444,000,000원",
+    "logo": "/media/logos/djtp.jpg",
+    "abbr": ""
+  },
+  {
+    "title": "부분방전 검사장비 평가 방법 개발",
+    "org": "Korea Research Institute of Standards and Science (KRISS)",
+    "program": "",
+    "start": "2025.01",
+    "end": "2025.12",
+    "amount": "35,000,000원",
+    "logo": "/media/logos/kriss.png",
+    "abbr": ""
+  },
+  {
+    "title": "수소 및 암모니아 배관을 위한 유도초음파 기반 모니터링 기술 개발",
+    "org": "Korea Technology and Information Promotion Agency for SMEs (TIPA)",
+    "program": "",
+    "start": "2024.08",
+    "end": "2025.07",
+    "amount": "120,000,000원",
+    "logo": "/media/logos/tipa.jpg",
+    "abbr": ""
+  },
+  {
+    "title": "공장 내 배관 설비 진단 알고리즘 개발 및 실증",
+    "org": "Electronics and Telecommunications Research Institute (ETRI)",
+    "program": "",
+    "start": "2024.08",
+    "end": "2025.07",
+    "amount": "",
+    "logo": "/media/logos/etri.png",
+    "abbr": ""
+  },
+  {
+    "title": "인공지능 기반 공장 이상 모니터링 및 시뮬레이션 기술 개발",
+    "org": "Electronics and Telecommunications Research Institute (ETRI)",
+    "program": "",
+    "start": "2024.07",
+    "end": "2025.02",
+    "amount": "",
+    "logo": "/media/logos/etri.png",
+    "abbr": ""
+  },
+  {
+    "title": "해상풍력 발전 케이블 상시 모니터링이 가능한 AI 기반 반사파 계측법이 적용된 IoT 진단 장비 및 자산관리 플랫폼 서비스",
+    "org": "Daejeon Technopark (대전TP)",
+    "program": "",
+    "start": "2024.05",
+    "end": "2025.10",
+    "amount": "77,000,000원",
+    "logo": "/media/logos/djtp.jpg",
+    "abbr": ""
+  },
+  {
+    "title": "HVDC MI 해저케이블 열화인자 도출 및 상태 진단기법 개발",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2022.11",
+    "end": "2024.10",
+    "amount": "151,248,000원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "특고압 환경의 배전설비 가속열화 및 시뮬레이션 연구",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2022.03",
+    "end": "2023.02",
+    "amount": "25,459,325원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "MTDC 전력망의 이상 징후 실시간 모니터링 시스템 개발",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "기초연구사업(중견연구)",
+    "start": "2021.09",
+    "end": "2025.02",
+    "amount": "239,345,000원",
+    "logo": "/media/logos/nrf.png",
+    "abbr": ""
+  },
+  {
+    "title": "VSC 기반 MTDC 시스템의 DC 고장 대응 시스템 개발",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2020.03",
+    "end": "2023.02",
+    "amount": "207,948,000원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "송전용 전선 자산관리 분석도구 개발 및 수명단축 메커니즘 분석",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2020.09",
+    "end": "2022.08",
+    "amount": "396,453,000원",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "무정전 배전케이블 진단 기법 개발",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "2020.12",
+    "end": "2021.06",
+    "amount": "",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "반사파 계측법 기반 휴대용 로봇 케이블 단선 자동 진단 키트 개발",
+    "org": "Hyundai Motor Group",
+    "program": "",
+    "start": "2019.12",
+    "end": "2020.06",
+    "amount": "",
+    "logo": "/media/logos/hyundai.png",
+    "abbr": ""
+  },
+  {
+    "title": "태양광/ESS 시스템의 안정적 운영을 위한 요소기술 연구개발",
+    "org": "Hanwha Solutions Corporation",
+    "program": "",
+    "start": "2019.07",
+    "end": "2020.06",
+    "amount": "",
+    "logo": "/media/logos/hanwha.png",
+    "abbr": ""
+  },
+  {
+    "title": "딥러닝 기반 자동차 전장 시스템 진단 기술 개발",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "",
+    "start": "2018.09",
+    "end": "2021.08",
+    "amount": "",
+    "logo": "/media/logos/nrf.png",
+    "abbr": ""
+  },
+  {
+    "title": "도시 재생에너지 통합시스템 고급트랙",
+    "org": "Korea Energy Technology Evaluation and Planning (KETEP)",
+    "program": "",
+    "start": "2018.03",
+    "end": "2021.02",
+    "amount": "",
+    "logo": "/media/logos/ketep.png",
+    "abbr": ""
+  },
+  {
+    "title": "지중송전케이블 수명 indexing 분석 조사 및 기술기준 수립",
+    "org": "KEPCO Knowledge, Data & Network Co., Ltd. (KEPCO KDN)",
+    "program": "",
+    "start": "",
+    "end": "",
+    "amount": "",
+    "logo": "/media/logos/kdn.png",
+    "abbr": ""
+  },
+  {
+    "title": "원자로 제어 및 계측 케이블 절연 파괴 진단 및 예측 기술 개발",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "",
+    "start": "",
+    "end": "",
+    "amount": "",
+    "logo": "/media/logos/nrf.png",
+    "abbr": ""
+  },
+  {
+    "title": "한국-헝가리 간 국제협력 연구를 통한 원전 제어계측 케이블 상태기반 정비기술 개발",
+    "org": "National Research Foundation of Korea (NRF)",
+    "program": "",
+    "start": "",
+    "end": "",
+    "amount": "",
+    "logo": "/media/logos/nrf.png",
+    "abbr": ""
+  },
+  {
+    "title": "HVDC 케이블 과도현상 해석 및 고장점 탐지장치 하드웨어 설계",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "",
+    "end": "",
+    "amount": "",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  },
+  {
+    "title": "초전도케이블 고장 진단을 위한 시간-주파수 영역 반사파 계측법 개발",
+    "org": "Korea Electric Power Research Institute (KEPRI)",
+    "program": "",
+    "start": "",
+    "end": "",
+    "amount": "",
+    "logo": "/media/logos/kepri.png",
+    "abbr": ""
+  }
+]

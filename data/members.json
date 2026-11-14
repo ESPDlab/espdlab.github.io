@@ -1,0 +1,195 @@
+[
+  {
+    "group": "postdoc",
+    "name": "지경환",
+    "nameEn": "Gyeong Hwan Ji",
+    "roleKo": "박사후연구원",
+    "roleEn": "Post Doctoral",
+    "interests": "power cable condition monitoring, vulnerability analysis for transmission line fault, diagnosis of power equipment based on artificial intelligence",
+    "noteKo": "",
+    "noteEn": "",
+    "email": "wsn3333@cau.ac.kr",
+    "photo": "/media/people/gyeong-hwan-ji.jpg",
+    "career": [
+      "Post Doctoral in CAU. (2026.03 ~)",
+      "Post Doctoral in KU. (2025.09 ~ 2026.02)",
+      "Integrated M.S./Ph.D. in School of Electrical and Electronic Engineering, Yonsei Univ. (2025.08)",
+      "B.S. in School of Electrical and Electronic Engineering, Yonsei Univ. (2016.02)"
+    ],
+    "publications": [
+      "Gyeong Hwan Ji, Seung Jin Chang, \"A Self-Calibration Method for Reference Signal Restoration under Termination-Induced Overlap in Reflectometry Blind Spots\", IEEE Sensors Journal, early access.",
+      "Gyeong Hwan Ji, Hobin Lim, and Yong-June Shin, \"Compensation for Connector-Induced Distortion to Improve Reflectometry Performance\", IEEE Trans. Instrum. Meas., vol. 74, pp. 3563310, Sep. 2025.",
+      "Geon Seok Lee, Gyeong Hwan Ji, Gu-Young Kwon, Su Sik Bang, Yeong Ho Lee, Song Ho Sohn, Kijun Park, and Yong-June Shin, \"Monitoring Method for an Unbalanced Three-Phase HTS Cable System via Time-Frequency Domain Reflectometry\", IEEE Trans. Appl. Supercond., vol. 28, no. 4, pp. 2500205, Jun. 2018.",
+      "Yeong Ho Lee, Su Sik Bang, Gu-Young Kwon, Geon Seok Lee, Gyeong Hwan Ji, Song Ho Sohn, Kijun Park, and Yong-June Shin, \"Analysis of Wave Propagation of HTS Cables for Compensation of Thermal Loss on Connectors\", IEEE Transactions on Appl. Supercond., vol. 27, no. 4, pp. 4801105, Jun. 2017."
+    ],
+    "projects": [
+      "복원력을 가진 자율 운영 전력망 연구 ('23.01-현재, 한국연구재단)",
+      "인입선로 용량증대 기술개발 ('23.01-'23.12, 주식회사 삼성전자)",
+      "차세대 전력망 진단 및 모니터링 기술 개발 ('23.01-'25.08, 한국연구재단)",
+      "원전 전력품질 향상을 위한 케이블 건전성 평가 및 상태감시 규제기술 개발 ('21.01-'22.12, 원자력안전재단)",
+      "지중송전선로 지능화 PD판정 및 선로교체 알고리즘 개발과 검증 ('19.05-'20.11, 한국전력공사)",
+      "배전용 DRS 및 배전케이블 HI 평가지표 알고리즘 설계 및 검증 ('19.01-'20.07, 한전KDN)",
+      "수퍼 그리드 구현을 위한 차세대 전력망 진단 및 모니터링 기술 개발 ('17.05-'20.04, 한국연구재단)",
+      "한국-헝가리 간 국제 협력 연구를 통한 원전 제어계측 케이블 상태기반 정비기술 개발 ('17.01-'19.12, 한국연구재단)",
+      "원전 케이블 건전성 평가를 위한 시간-주파수 반사파 기반 이동형 케이블 진단 시스템 및 상태평가 방법 개발 ('16.11-'19.10, 한국에너지기술평가원)",
+      "초전도케이블 고장 진단을 위한 시간-주파수 영역 반사파 계측법 개발 ('16.03-'17.03)"
+    ],
+    "awards": [
+      "신입우수장학생, 연세대학교 일반대학원, 2016.",
+      "우수졸업자, 연세대학교, 2015."
+    ]
+  },
+  {
+    "group": "phd",
+    "name": "성현모",
+    "nameEn": "Hyun-Mo Seong",
+    "roleKo": "박사과정",
+    "roleEn": "Ph.D. Student",
+    "interests": "diagnosis and prognostics of power equipment, signal processing techniques",
+    "noteKo": "",
+    "noteEn": "",
+    "email": "gusah012@cau.ac.kr",
+    "photo": "/media/people/hyun-mo-seong.jpg",
+    "career": [
+      "Ph.D. in Energy Systems Engineering, CAU (2026.09 ~)",
+      "M.S. student in Energy Systems Engineering, CAU (2026.08)",
+      "B.S. in Department of Electrical Engineering, HBNU (2024.02)"
+    ],
+    "publications": [
+      "Hyun-Mo Seong, Yeon-Sub Sim, Chun-Kwon Lee, Gu-Young Kwon, Seung Jin Chang, \"Development of a Fault Localization Algorithm Based on SFWR Considering Propagation Velocity Changes with Propagation Distance\", 2024 IEEE International Instrumentation and Measurement Technology Conference (I2MTC), May. 2025.",
+      "Hyun-Mo Seong, Chang Hyeon Hong, Seung Jin Chang, \"Statistical Estimation of Propagation Constants Using Stepped-Frequency Waveform Reflectometry\", 2024 10th International Conference on Condition Monitoring and Diagnosis (CMD), Oct. 2024.",
+      "Hyun-Mo Seong, Yeon-Sub Sim, Geon Seok Lee, *Seung Jin Chang, \"Development of quench detection method around the joint box for HTS cable using TFDR and EM algorithm\", IEEE Transactions on Applied Superconductivity, Jan. 2024.",
+      "성현모, 심연섭, 장승진, \"전파 거리에 따른 신호의 감쇠와 분산이 고려된 순시 주파수 추정 알고리즘 및 장거리 전파용 반사파 계측법 시뮬레이터 개발\", 전기학회논문지, Jun. 2023."
+    ],
+    "projects": [
+      "비가교 올레핀계 공중합체 기반 해상풍력용 66kV 이상급 웻타입 인터어레이 전력케이블제조 기술 개발 ('26.09-'26.12, 한국산업기술기획평가원)",
+      "노후 풍력발전시스템 안전관리를 위한 위험요소발굴 및 안전등급 판정 기준 도출 ('26.05-'26.10, 한국전기안전공사)",
+      "PV 직류 직렬 아크 탐지 시스템 개발 ('26.01-'26.12, 한국표준과학연구원)",
+      "Noise-Resistant 활선상태 케이블 진단 기술 개발 ('25.03-현재, 주식회사 삼성전자)",
+      "부분방전 검사장비 평가 방법 개발 ('25.01-'25.12, 한국표준과학연구원)",
+      "해상풍력용 Wet Type 해저케이블 열화 검출을위한 반사파 활용 진단 기술 개발 ('24.08-현재, 한국에너지기술평가원)",
+      "디지털 트윈 기반 해상풍력발전 케이블 시스템 모델링 및 AI 신호처리를 활용한 고장감시 기법 연구 ('24.07-'25.06, 한국연구재단)",
+      "HVDC MI 해저케이블 열화인자 도출 및 상태 진단기법 개발 ('22.11-'24.10, 한국전력공사)",
+      "VSC 기반 MTDC 시스템의 DC 고장 대응 시스템 개발 ('22.07-'23.02, 한국전력공사)",
+      "MTDC 전력망의 이상 징후 실시간 모니터링 시스템 개발 ('22.03-'25.02, 한국연구재단)",
+      "특고압환경의 배전설비 가속열화 및 시뮬레이션 연구 ('22.03-'23.03, 한국전력공사)"
+    ],
+    "awards": [
+      "전기물성•응용부문회 장학생, KIEE, Oct. 2026.",
+      "학술대회 우수상, KIEE, Jul. 2026.",
+      "ALCP 최우수상, CAU, Jul. 2025.",
+      "Best Paper Award, ICEF 2024, Aug. 2024.",
+      "우수졸업자, KIEE, Feb. 2024.",
+      "학술대회 우수상, KIEE, Jul. 2023.",
+      "아산미래장학회 4차 산업 인재 육성 장학생, Jun. 2023.",
+      "전기학회 논문지 게재 및 우수 논문상, KIEE, Jun. 2023.",
+      "학술대회 우수상, KIEE, Jul. 2022."
+    ]
+  },
+  {
+    "group": "ms",
+    "name": "홍창현",
+    "nameEn": "Chang Hyeon Hong",
+    "roleKo": "석사과정",
+    "roleEn": "M.S. Student",
+    "interests": "diagnosis and prognostics of power cable, signal processing techniques, HFCT Sensor",
+    "noteKo": "",
+    "noteEn": "",
+    "email": "cccchyeon93@gmail.com",
+    "photo": "/media/people/chang-hyeon-hong.jpg",
+    "career": [
+      "M.S. student in Energy Systems Engineering, CAU (2026.03 ~)",
+      "Associate, GridCure (2023.07 ~) · ch@grid-cure.com",
+      "B.S. in Department of Electrical Engineering, HBNU (2024.02)"
+    ],
+    "publications": [
+      "Chang Hyeon Hong, Yeon-Sub Sim, Hyun-Mo Seong, Gu-Young Kwon, Chun-Kwon Lee, Seung Jin Chang, \"Development of a Multiple HFCT-Based Reflectometry System for Live Cable Diagnosis\", 2024 IEEE International Instrumentation and Measurement Technology Conference (I2MTC), May. 2025."
+    ],
+    "projects": [
+      "비가교 올레핀계 공중합체 기반 해상풍력용 66kV 이상급 웻타입 인터어레이 전력케이블제조 기술 개발 ('26.07-'30.12, 한국산업기술기획평가원)",
+      "실시간 고장구간 및 고장점탐지 하드웨어 장치사양 검토 및 상세 설계 ('25.11-현재, 한국에너지기술평가원)",
+      "AI 기반 발전소 특고압 케이블 예측 진단 시스템 개발 ('25.06-현재, 한국서부발전)",
+      "정전없는 Energy Grid 구축을 위한, 정전이 필요없는 AI 기반 반사파 계측법이 적용된 IoT 진단기기 및 구독형 플랫폼 서비스 ('25.01-현재, 중소기업기술정보진흥원)",
+      "임베디드 시스템을 활용한 유도초음파 기반 배관 진단 신기술 현장 적용 및 실증 ('24.10-'25.10, 대전테크노파크)",
+      "해상풍력용 Wet Type 해저케이블 열화 검출을위한 반사파 활용 진단 기술 개발 ('24.08-현재, 한국에너지기술평가원)",
+      "수소 및 암모니아 배관을 위한 유도초음파 기반 모니터링 기술 개발 ('24.08-'25.07, 중소기업기술정보진흥원)",
+      "HVDC MI 해저케이블 열화인자 도출 및 상태 진단기법 개발 ('22.11-'24.10, 한국전력공사)",
+      "VSC 기반 MTDC 시스템의 DC 고장 대응 시스템 개발 ('22.07-'23.02, 한국전력공사)",
+      "MTDC 전력망의 이상 징후 실시간 모니터링 시스템 개발 ('22.03-'25.02, 한국연구재단)",
+      "특고압환경의 배전설비 가속열화 및 시뮬레이션 연구 ('22.03-'23.03, 한국전력공사)"
+    ],
+    "awards": [
+      "학술대회 우수상, KIEE, Jul. 2023."
+    ]
+  },
+  {
+    "group": "ms",
+    "name": "류재현",
+    "nameEn": "Jae-Hyun Ryu",
+    "roleKo": "석사과정",
+    "roleEn": "M.S. Student",
+    "interests": "diagnosis and prognostics of power cable, anomaly detection, artificial intelligence",
+    "noteKo": "",
+    "noteEn": "",
+    "email": "jaehyun0509@cau.ac.kr",
+    "photo": "/media/people/jae-hyun-ryu.jpg",
+    "career": [
+      "M.S. student in Energy Systems Engineering, CAU (2026.03 ~)",
+      "B.S. in Department of Electrical Engineering, HBNU (2026.02)"
+    ],
+    "publications": [
+      "류재현, 권구영, 이춘권, 장승진, \"TFDR 및 SFWR 기반 전파 상수 추정을 이용한 해저케이블 절연 진단 적용성 평가\", 전기학회논문지, Aug. 2026.",
+      "Jae-Hyun Ryu, Hyun-Mo Seong, Chun-Kwon Lee, Gu-Young Kwon, Seung Jin Chang, \"Development of AI-based Reflectometry for Multiple Series Arc Faults Localization in PV Systems\", 2025 IEEE International Instrumentation and Measurement Technology Conference (I2MTC), May. 2026."
+    ],
+    "projects": [
+      "크로스본딩 구조 지중 송전 케이블의 정밀 진단을 위한 물리 모델 기반 인공지능 고도화 연구 ('26.09-'27.08, 한국연구재단)",
+      "비가교 올레핀계 공중합체 기반 해상풍력용 66kV 이상급 웻타입 인터어레이 전력케이블제조 기술 개발 ('26.09-'26.12, 한국산업기술기획평가원)",
+      "노후 풍력발전시스템 안전관리를 위한 위험요소발굴 및 안전등급 판정 기준 도출 ('26.05-'26.10, 한국전기안전공사)",
+      "PV 직류 직렬 아크 탐지 시스템 개발 ('26.01-'26.12, 한국표준과학연구원)",
+      "Noise-Resistant 활선상태 케이블 진단 기술 개발 ('26.01-현재, 주식회사 삼성전자)",
+      "해상풍력용 Wet Type 해저케이블 열화 검출을위한 반사파 활용 진단 기술 개발 ('26.01-현재, 한국에너지기술평가원)",
+      "부분방전 검사장비 평가 방법 개발 ('25.06-'25.12, 한국표준과학연구원)",
+      "수소 및 암모니아 배관을 위한 유도초음파 기반 모니터링 기술 개발 ('25.03-'25.07, 중소기업기술정보진흥원)",
+      "MTDC 전력망의 이상 징후 실시간 모니터링 시스템 개발 ('24.10-'25.02, 한국연구재단)",
+      "HVDC MI 해저케이블 열화인자 도출 및 상태 진단기법 개발 ('24.03-'24.10, 한국전력공사)"
+    ],
+    "awards": [
+      "전기물성•응용부문회 장학생, KIEE, Oct. 2026.",
+      "제7회 전기안전 우수논문 공모전 대한전기학회장상, 전기안전공사, Jun. 2026.",
+      "제14회 정보기술대학 작품전시회 금상, 국립한밭대학교, Dec. 2025.",
+      "Best Paper Award, ICEF 2024, Aug. 2024."
+    ]
+  },
+  {
+    "group": "undergrad",
+    "name": "강보성",
+    "nameEn": "",
+    "roleKo": "학부 연구생",
+    "roleEn": "Undergraduate Student",
+    "interests": "",
+    "noteKo": "중앙대학교 에너지시스템공학부",
+    "noteEn": "School of Energy Systems Engineering, CAU",
+    "email": "boseonggang965@gmail.com",
+    "photo": "/media/people/boseonggang965.jpg",
+    "career": [],
+    "publications": [],
+    "projects": [],
+    "awards": []
+  },
+  {
+    "group": "alumni",
+    "name": "심연섭",
+    "nameEn": "Yeon-Sub Sim",
+    "roleKo": "졸업생 · 석사",
+    "roleEn": "Alumni · M.S.",
+    "interests": "",
+    "noteKo": "한국전력공사 전력연구원(KEPRI)",
+    "noteEn": "Korea Electric Power Research Institute (KEPRI)",
+    "email": "",
+    "photo": "/media/people/yeon-sub-sim.jpg",
+    "career": [],
+    "publications": [],
+    "projects": [],
+    "awards": []
+  }
+]

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ESPD Lab · 중앙대학교 에너지시스템 예지 &amp; 진단 연구실</title>
+<meta name="description" content="중앙대학교 에너지시스템 예지 &amp; 진단 연구실. 전력 케이블과 전력설비의 고장을 정전 없이 찾아내고 남은 수명을 예측합니다.">
+<meta property="og:title" content="ESPD Lab · 중앙대학교 에너지시스템 예지 &amp; 진단 연구실">
+<meta property="og:description" content="중앙대학교 에너지시스템 예지 &amp; 진단 연구실. 전력 케이블과 전력설비의 고장을 정전 없이 찾아내고 남은 수명을 예측합니다.">
+<meta property="og:image" content="https://espdlab.github.io/media/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Noto+Sans+KR:wght@300;400;600&amp;display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/bundle.css">
+<link rel="stylesheet" href="css/site.css">
+<style>
+/* 첫 화면: 그림이 화면을 꽉 채우고, 글은 그 위 왼쪽에 얹는다. .hero-lit 은 전력망을 밝게 그린 같은 그림으로, 포인터 둘레만 드러난다(js/site.js 의 glow). */
+.hero{position:relative;aspect-ratio:16/9;overflow:hidden}
+.hero-stage{position:absolute;inset:0}
+.hero-art{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:72% 50%}
+.hero-lit{--mx:70%;--my:45%;-webkit-mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 21vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
+.hero-copy{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:var(--space-sm);width:100%;max-width:var(--content-text);margin:0 auto;padding:10% var(--space-lg) 0;box-sizing:border-box;text-align:left;pointer-events:none}
+.hero-copy > *{margin:0;max-width:480px}
+.hero-copy a{pointer-events:auto}
+.hero-credit{position:absolute;right:var(--space-sm);bottom:var(--space-xs);margin:0;color:var(--body-muted);opacity:.7}
+.hero-credit a{color:inherit}
+@media (min-width:1029px){.hero-copy{padding-left:0;padding-right:0}}
+@media (max-width:900px){
+.hero{aspect-ratio:auto;display:flex;flex-direction:column-reverse}
+.hero-stage{position:relative;inset:auto;aspect-ratio:4/3}
+.hero-lit{-webkit-mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%);mask-image:radial-gradient(circle 30vw at var(--mx) var(--my),#000 0,rgba(0,0,0,.6) 40%,transparent 100%)}
+.hero-copy{position:static;padding:var(--space-xxl) var(--space-lg)}
+.hero-copy .hero-display{font-size:34px}
+.hero-copy .lead{font-size:21px}
+}
+</style>
+<script src="js/site.js"></script>
+</head>
+<body>
+<site-header></site-header>
+<main>
+<section class="hero" data-surface="black">
+<div class="hero-stage">
+<img class="hero-art" src="media/hero.jpg" alt="우주에서 내려다본 밤의 한반도와 빛나는 전력망">
+<img class="hero-art hero-lit" src="media/hero-lit.jpg" alt="" aria-hidden="true">
+</div>
+<div class="hero-copy">
+<h1 class="hero-display">Energy System<br>Prognostics &amp;<br>Diagnostics Lab</h1>
+<p class="lead"><span lang="ko">중앙대학교 에너지시스템<br>예지 &amp; 진단 연구실</span><span lang="en">School of Energy Systems Engineering, Chung-Ang University</span></p>
+<p class="body lab-muted"><span lang="ko">전력 인프라의 고장을 정전 없이 찾아내는 진단 기술을 연구합니다.</span><span lang="en">We develop diagnostic technologies for power infrastructure.</span></p>
+<div style="display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: var(--space-sm)">
+<a class="lab-btn lab-btn-primary body" href="research.html"><span lang="ko">연구 보기</span><span lang="en">Research</span></a>
+<a class="lab-btn lab-btn-secondary body" href="members.html"><span lang="ko">구성원</span><span lang="en">Research Team</span></a>
+</div>
+</div>
+<p class="hero-credit micro-legal">Grid data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors</p>
+</section>
+
+<section class="lab-tile" data-surface="parchment">
+<h2 class="display-lg"><span lang="ko">구성원 모집</span><span lang="en">Join Us</span></h2>
+<p class="lab-tile-lead lead"><span lang="ko">박사후연구원, 석·박사과정 대학원생, 학부 연구생을 모집합니다.</span><span lang="en">We are recruiting postdoctoral researchers, M.S./Ph.D. students and undergraduate researchers.</span></p>
+<div class="lab-tile-actions">
+<a class="lab-btn lab-btn-primary body" href="contact.html"><span lang="ko">더 알아보기</span><span lang="en">Learn more</span></a>
+<a class="lab-btn lab-btn-secondary body" href="mailto:jpromo8@cau.ac.kr"><span lang="ko">지원 문의</span><span lang="en">Apply</span></a>
+</div>
+</section>
+
+<section class="lab-tile" data-surface="dark">
+<h2 class="display-lg"><span lang="ko">연구 분야</span><span lang="en">Research</span></h2>
+<p class="lab-tile-lead lead"><span lang="ko">정전 없이 신호를 주입해 전력 케이블의 고장 위치를 실시간으로 찾습니다.</span><span lang="en">Real-time detection of fault locations in power cables through signal injection without power outages.</span></p>
+<div class="lab-tile-actions">
+<a class="lab-btn lab-btn-primary body" href="research.html"><span lang="ko">더 알아보기</span><span lang="en">Learn more</span></a>
+<a class="lab-btn lab-btn-secondary body" href="publications.html"><span lang="ko">논문 보기</span><span lang="en">Publications</span></a>
+</div>
+<div class="lab-tile-figure xvideo" style="width: 100%; max-width: var(--content-text); border-radius: 0">
+<img src="media/video/substation-poster.jpg" alt="" loading="lazy">
+<video data-autoplay src="media/video/substation.mp4" muted="muted" loop="loop" playsinline="playsinline" preload="metadata" aria-label="변전소 철구조물과 송전 설비를 담은 영상"></video>
+</div>
+</section>
+
+<section class="lab-tile" data-surface="canvas">
+<h2 class="display-lg"><span lang="ko">소식</span><span lang="en">News &amp; Gallery</span></h2>
+<p class="lab-tile-lead lead"><span lang="ko">수상, 학회 참가, 현장 실험 소식을 전합니다.</span><span lang="en">Awards, conferences and field experiments from the lab.</span></p>
+<div class="lab-tile-actions">
+<a class="lab-btn lab-btn-primary body" href="news.html"><span lang="ko">소식 보기</span><span lang="en">View news</span></a>
+</div>
+<img class="lab-tile-figure" src="media/news/2026/2026-07-08-01.jpg" alt="2026 대한전기학회 하계학술대회 행사장 앞에 선 연구실 구성원" loading="lazy" style="width: 100%; max-width: var(--content-text); aspect-ratio: 16 / 9; object-fit: cover">
+</section>
+</main>
+<site-footer></site-footer>
+</body>
+</html>
