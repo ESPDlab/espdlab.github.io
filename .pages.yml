@@ -40,10 +40,18 @@ content:
           - name: photos
             label: 사진
             type: image
-            description: "첫 장이 대표 사진이다. 올리기 전에 긴 변을 2000px 이하로 줄인다."
+            description: "첫 장이 대표 사진이다. 올리기 전에 긴 변을 2560px 이하로 줄인다."
             options:
               multiple: true
               path: media/news
+          - name: videos
+            label: 영상
+            type: file
+            description: "mp4 파일만(H.264로 저장한 것). 사진 뒤에 차례로 보인다. 한 개가 20 MB를 넘지 않게 한다."
+            options:
+              multiple: true
+              path: media/news
+              extensions: [mp4]
 
   - name: members
     label: 구성원

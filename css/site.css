@@ -53,8 +53,8 @@ dialog.xcard:modal .ximg { width: min(100%, 560px); margin: var(--space-lg) auto
 .carousel { position: relative; }
 .strip { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; background: var(--canvas-parchment); border-radius: var(--rounded-sm); }
 .strip::-webkit-scrollbar { display: none; }
-.strip > img { flex: none; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; scroll-snap-align: start; }
-dialog.xcard:modal .strip > img { aspect-ratio: 3 / 2; object-fit: contain; }
+.strip > img, .strip > video { flex: none; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; scroll-snap-align: start; }
+dialog.xcard:modal .strip > img, dialog.xcard:modal .strip > video { aspect-ratio: 3 / 2; object-fit: contain; }
 .carousel .nav { position: absolute; top: calc(50% - 16px); z-index: 1; width: 32px; height: 32px; opacity: 0; transition: opacity 0.2s ease, transform 0.1s ease; }
 .carousel .nav::before { content: ""; width: 7px; height: 7px; border: solid currentColor; border-width: 0 0 1.5px 1.5px; }
 .carousel .nav.prev::before { transform: translateX(2px) rotate(45deg); }

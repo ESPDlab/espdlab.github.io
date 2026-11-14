@@ -142,13 +142,14 @@
     const items = (await load('news')).slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
     grid.innerHTML = items.map((n) => {
       const photos = n.photos || [];
-      const many = photos.length > 1;
+      const videos = n.videos || [];          // 영상(mp4)은 사진 뒤에 차례로 놓인다
+      const many = photos.length + videos.length > 1;
       return `<article class="cell" data-c="${esc(n.category)}">
 <dialog open class="lab-card lift xcard" aria-label="${esc(n.title)}">
 <button class="lab-btn lab-btn-icon xclose when-open" type="button" aria-label="Close"></button>
-${photos.length ? `<div class="carousel${many ? '' : ' single'} above"><div class="strip">${photos.map((p) => `<img src="${src(p)}" alt="" loading="lazy">`).join('')}</div>${many ? '<button class="lab-btn lab-btn-icon nav prev" type="button" aria-label="Previous photo"></button><button class="lab-btn lab-btn-icon nav next" type="button" aria-label="Next photo"></button>' : ''}</div>` : ''}
+${photos.length || videos.length ? `<div class="carousel${many ? '' : ' single'} above"><div class="strip">${photos.map((p) => `<img src="${src(p)}" alt="" loading="lazy">`).join('')}${videos.map((v) => `<video src="${src(v)}#t=0.1" controls playsinline preload="metadata"></video>`).join('')}</div>${many ? '<button class="lab-btn lab-btn-icon nav prev" type="button" aria-label="Previous photo"></button><button class="lab-btn lab-btn-icon nav next" type="button" aria-label="Next photo"></button>' : ''}</div>` : ''}
 <h3 class="body-strong clamp2" style="margin-top: var(--space-md); min-height: 42px"><button class="stretch" type="button">${esc(n.title)}</button></h3>
-<p class="lab-card-meta caption lab-muted">${esc(String(n.date).replace(/-/g, '. '))}${many ? t(` · 사진 ${photos.length}장`, ` · ${photos.length} photos`) : ''}</p>
+<p class="lab-card-meta caption lab-muted">${esc(String(n.date).replace(/-/g, '. '))}${photos.length > 1 ? t(` · 사진 ${photos.length}장`, ` · ${photos.length} photos`) : ''}${videos.length ? t(` · 영상 ${videos.length}개`, ` · ${videos.length} video${videos.length > 1 ? 's' : ''}`) : ''}</p>
 ${n.body ? `<p class="body when-open" style="margin-top: var(--space-sm); white-space: pre-line">${esc(n.body)}</p>` : ''}
 </dialog>
 </article>`;
