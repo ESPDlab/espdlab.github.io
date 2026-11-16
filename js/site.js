@@ -319,7 +319,7 @@ ${lists.map(([k, ko, en]) => `<section>
     size();
     window.addEventListener('resize', size);
     win.classList.add('on');
-    if (still || !window.IntersectionObserver) return;       // 움직임 줄이기를 켠 사람에게는 불빛이 한자리에 머문다
+    if (!window.IntersectionObserver) return;       // 아주 오래된 브라우저에서는 불빛이 한자리에 머문다
     let tx = x, ty = y, moved = -1e9, seen = false, raf = 0;
     stage.parentElement.addEventListener('pointermove', (e) => {
       const b = stage.getBoundingClientRect();
@@ -328,7 +328,8 @@ ${lists.map(([k, ko, en]) => `<section>
       moved = performance.now();
     });
     const tick = (now) => {
-      if (now - moved > 2500) {        // 한반도 위치를 그림 비율로 적어 둔 값. 그림 구도를 바꾸면 이 숫자도 바꾼다.
+      // 움직임 줄이기를 켠 사람에게는 불빛이 혼자 돌지 않고 포인터만 따라간다.
+      if (!still && now - moved > 2500) {        // 한반도 위치를 그림 비율로 적어 둔 값. 그림 구도를 바꾸면 이 숫자도 바꾼다.
         tx = 0.7 + 0.08 * Math.cos(now / 3600);
         ty = 0.55 + 0.27 * Math.sin(now / 5200);
       }
