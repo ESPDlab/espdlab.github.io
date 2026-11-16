@@ -7,8 +7,6 @@
       "roleKo": "박사후연구원",
       "roleEn": "Post Doctoral",
       "interests": "power cable condition monitoring, vulnerability analysis for transmission line fault, diagnosis of power equipment based on artificial intelligence",
-      "noteKo": "",
-      "noteEn": "",
       "email": "wsn3333@cau.ac.kr",
       "photo": "/media/people/gyeong-hwan-ji.jpg",
       "career": [
@@ -47,8 +45,6 @@
       "roleKo": "박사과정",
       "roleEn": "Ph.D. Student",
       "interests": "diagnosis and prognostics of power equipment, signal processing techniques",
-      "noteKo": "",
-      "noteEn": "",
       "email": "gusah012@cau.ac.kr",
       "photo": "/media/people/hyun-mo-seong.jpg",
       "career": [
@@ -94,8 +90,6 @@
       "roleKo": "석사과정",
       "roleEn": "M.S. Student",
       "interests": "diagnosis and prognostics of power cable, signal processing techniques, HFCT Sensor",
-      "noteKo": "",
-      "noteEn": "",
       "email": "cccchyeon93@gmail.com",
       "photo": "/media/people/chang-hyeon-hong.jpg",
       "career": [
@@ -130,8 +124,6 @@
       "roleKo": "석사과정",
       "roleEn": "M.S. Student",
       "interests": "diagnosis and prognostics of power cable, anomaly detection, artificial intelligence",
-      "noteKo": "",
-      "noteEn": "",
       "email": "jaehyun0509@cau.ac.kr",
       "photo": "/media/people/jae-hyun-ryu.jpg",
       "career": [
@@ -157,25 +149,18 @@
       "awards": [
         "전기물성•응용부문회 장학생, KIEE, Oct. 2026.",
         "제7회 전기안전 우수논문 공모전 대한전기학회장상, 전기안전공사, Jun. 2026.",
-        "제14회 정보기술대학 작품전시회 금상, 국립한밭대학교, Dec. 2025.",
         "Best Paper Award, ICEF 2024, Aug. 2024."
       ]
     },
     {
       "group": "undergrad",
       "name": "강보성",
-      "nameEn": "",
       "roleKo": "학부 연구생",
       "roleEn": "Undergraduate Student",
-      "interests": "",
       "noteKo": "중앙대학교 에너지시스템공학부",
       "noteEn": "School of Energy Systems Engineering, CAU",
       "email": "boseonggang965@gmail.com",
-      "photo": "/media/people/boseonggang965.jpg",
-      "career": [],
-      "publications": [],
-      "projects": [],
-      "awards": []
+      "photo": "/media/people/boseonggang965.jpg"
     },
     {
       "group": "alumni",
@@ -183,15 +168,9 @@
       "nameEn": "Yeon-Sub Sim",
       "roleKo": "졸업생 · 석사",
       "roleEn": "Alumni · M.S.",
-      "interests": "",
       "noteKo": "한국전력공사 전력연구원(KEPRI)",
       "noteEn": "Korea Electric Power Research Institute (KEPRI)",
-      "email": "",
-      "photo": "/media/people/yeon-sub-sim.jpg",
-      "career": [],
-      "publications": [],
-      "projects": [],
-      "awards": []
+      "photo": "/media/people/yeon-sub-sim.jpg"
     }
   ]
 }
