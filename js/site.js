@@ -175,7 +175,7 @@ ${n.body ? `<p class="body when-open" style="margin-top: var(--space-sm); white-
     const card = (live) => (p) => `<article class="lab-card lift" style="display: flex; flex-direction: column">
 <p class="caption-strong${live ? '' : ' lab-muted'}" style="margin: 0${live ? '; color: var(--primary)' : ''}">${[p.start, p.end].filter(Boolean).map(esc).join(' – ') || '—'}</p>
 <h3 class="body-strong clamp4" style="margin: var(--space-xs) 0 0; min-height: 84px">${esc(p.title)}</h3>
-<p class="caption lab-muted clamp2" style="margin: var(--space-xs) 0 0; min-height: 40px">${esc(p.program ? p.org + ' · ' + p.program : p.org)}</p>
+<p class="caption lab-muted clamp2" style="margin: var(--space-xs) 0 0; min-height: 2.86em">${esc(p.program ? p.org + ' · ' + p.program : p.org)}</p>
 ${p.logo ? `<img class="plogo-img" src="${src(p.logo)}" alt="" loading="lazy">` : `<div class="tagline lab-muted" aria-hidden="true" style="height: 120px; margin: var(--space-sm) 0; display: grid; place-items: center">${esc(p.abbr)}</div>`}
 <p class="body-strong" style="margin: auto 0 0; min-height: 21px">${esc(p.amount)}</p>
 </article>`;
@@ -257,7 +257,7 @@ ${m.photo ? `<img src="${src(m.photo)}" alt="" loading="lazy" style="flex: none;
 <p class="caption lab-muted" style="margin: 0">${t(esc(m.roleKo), esc(m.roleEn || m.roleKo))}</p>
 <h3 class="tagline" style="margin: 0">${esc(m.name)}</h3>
 <p class="caption" style="margin: 0">${esc(m.nameEn)}</p>
-<p class="caption lab-muted clamp3" style="margin: var(--space-xs) 0 0; min-height: 60px">${m.interests ? t('관심 분야', 'Interests') + ': ' + esc(m.interests) : t(esc(m.noteKo), esc(m.noteEn || m.noteKo))}</p>
+<p class="caption lab-muted clamp3" style="margin: var(--space-xs) 0 0; min-height: 4.29em">${m.interests ? t('관심 분야', 'Interests') + ': ' + esc(m.interests) : t(esc(m.noteKo), esc(m.noteEn || m.noteKo))}</p>
 ${m.email ? `<a class="lab-link caption above" href="mailto:${esc(m.email)}" style="margin: 0; padding: var(--space-xs) 0">${esc(m.email)}</a>` : ''}
 ${lists.length ? `<button class="stretch when-closed" type="button"><span class="lab-link caption">${t('경력 및 연구실적', 'Career &amp; achievements')}</span></button>` : ''}
 </div>
