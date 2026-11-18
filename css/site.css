@@ -4,8 +4,10 @@
 /* 언어 전환: 루트의 data-lang과 맞지 않는 lang 조각을 숨긴다 */
 [data-lang="ko"] [lang="en"], [data-lang="en"] [lang="ko"] { display: none !important; }
 
-/* GlobalNav의 로고 */
-.site-logo { display: block; height: 28px; width: auto; }
+/* GlobalNav: 로고와 글자를 시스템 값보다 키웠다. 좁은 화면에서는 로고와 언어 버튼이 화면 폭에 맞춰 줄어든다 */
+.site-logo { display: block; height: min(56px, 11vw); width: auto; }
+.lab-gnav .button-utility { font-size: min(23px, 4vw); }
+.lab-gnav-icon svg { width: 24px; height: 24px; }
 
 /* 같은 줄의 카드 높이를 맞춘다 */
 .lab-grid.eq { align-items: stretch; }
@@ -86,7 +88,7 @@ site-header, site-footer { display: block; }
 [data-lang="ko"] .only-en, [data-lang="en"] .only-ko { display: none; }
 .site-menu { display: flex; flex-direction: column; padding: 0 24px 16px; }
 .site-menu a { padding: 9px 0; color: inherit; text-decoration: none; }
-@media (min-width: 834px) { .site-menu { display: none; } }
+@media (min-width: 1200px) { .site-menu { display: none; } }   /* bundle.css 에서 GlobalNav 가 접히는 폭(1199px)과 맞춘 값 */
 
 /* 좁은 화면의 글자 크기. 시스템은 Tile 안의 제목만 줄이므로, 나머지가 제목보다 커지지 않게 여기서 맞춘다. */
 @media (max-width: 640px) {
