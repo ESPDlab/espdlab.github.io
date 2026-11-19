@@ -252,14 +252,14 @@ ${p.logo ? `<img class="plogo-img" src="${src(p.logo)}" alt="" loading="lazy">` 
     const card = (m) => {
       const lists = LISTS.filter(([k]) => (m[k] || []).length);
       const head = `<div style="display: flex; gap: var(--space-lg); align-items: flex-start">
-${m.photo ? `<img src="${src(m.photo)}" alt="" loading="lazy" style="flex: none; width: 120px; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: var(--rounded-sm)">` : ''}
+${m.photo ? `<img src="${src(m.photo)}" alt="" loading="lazy" style="flex: none; width: min(150px, 30%); aspect-ratio: 3 / 4; object-fit: cover; object-position: top; border-radius: var(--rounded-sm)">` : ''}
 <div style="min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-xxs)">
-<p class="caption lab-muted" style="margin: 0">${t(esc(m.roleKo), esc(m.roleEn || m.roleKo))}</p>
-<h3 class="tagline" style="margin: 0">${esc(m.name)}</h3>
-<p class="caption" style="margin: 0">${esc(m.nameEn)}</p>
-<p class="caption lab-muted clamp3" style="margin: var(--space-xs) 0 0; min-height: 4.29em">${m.interests ? t('관심 분야', 'Interests') + ': ' + esc(m.interests) : t(esc(m.noteKo), esc(m.noteEn || m.noteKo))}</p>
-${m.email ? `<a class="lab-link caption above" href="mailto:${esc(m.email)}" style="margin: 0; padding: var(--space-xs) 0">${esc(m.email)}</a>` : ''}
-${lists.length ? `<button class="stretch when-closed" type="button"><span class="lab-link caption">${t('경력 및 연구실적', 'Career &amp; achievements')}</span></button>` : ''}
+<p class="body lab-muted" style="margin: 0">${t(esc(m.roleKo), esc(m.roleEn || m.roleKo))}</p>
+<h3 class="lead" style="margin: 0; font-weight: 600">${esc(m.name)}</h3>
+<p class="body" style="margin: 0">${esc(m.nameEn)}</p>
+<p class="body lab-muted clamp4" style="margin: var(--space-xs) 0 0; min-height: 5.88em">${m.interests ? t('관심 분야', 'Interests') + ': ' + esc(m.interests) : t(esc(m.noteKo), esc(m.noteEn || m.noteKo))}</p>
+${m.email ? `<p class="body above" style="margin: 0; display: flex; flex-wrap: wrap; gap: 0 var(--space-md)">${String(m.email).split(/[\s,]+/).filter(Boolean).map((e) => `<a class="lab-link" href="mailto:${esc(e)}" style="margin: 0; padding: var(--space-xs) 0">${esc(e)}</a>`).join('')}</p>` : ''}
+${lists.length ? `<button class="stretch when-closed" type="button"><span class="lab-link body">${t('경력 및 연구실적', 'Career &amp; achievements')}</span></button>` : ''}
 </div>
 </div>`;
       if (!lists.length) return `<article class="lab-card lift">${head}</article>`;
@@ -269,8 +269,8 @@ ${lists.length ? `<button class="stretch when-closed" type="button"><span class=
 ${head}
 <div class="when-open" style="margin-top: var(--space-xl); display: flex; flex-direction: column; gap: var(--space-xl)">
 ${lists.map(([k, ko, en]) => `<section>
-<h4 class="body-strong" style="margin: 0 0 var(--space-xs)">${t(ko, en)}</h4>
-<ul class="caption" style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: var(--space-xxs)">${m[k].map((s) => `<li>${k === 'publications' ? bold(s, [m.nameEn, m.name]) : esc(s)}</li>`).join('')}</ul>
+<h4 class="tagline" style="margin: 0 0 var(--space-xs)">${t(ko, en)}</h4>
+<ul class="body" style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: var(--space-xxs)">${m[k].map((s) => `<li>${k === 'publications' ? bold(s, [m.nameEn, m.name]) : esc(s)}</li>`).join('')}</ul>
 </section>`).join('')}
 </div>
 </dialog>

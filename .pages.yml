@@ -86,7 +86,7 @@ content:
           - { name: interests, label: 관심 분야, type: text }
           - { name: noteKo, label: 근황 (한국어), type: string, description: "졸업생의 현재 소속 등. 관심 분야가 비어 있을 때 그 자리에 보인다." }
           - { name: noteEn, label: 근황 (영어), type: string }
-          - { name: email, label: 이메일, type: string }
+          - { name: email, label: 이메일, type: string, description: "여러 개면 쉼표로 나눠 적는다." }
           - name: photo
             label: 사진
             type: image
@@ -171,4 +171,4 @@ content:
           - { name: when, label: 권·호·시기, type: string, description: "예: vol. 74, Sep. 2025 / 특허는 출원번호와 시기." }
           - { name: authors, label: 저자, type: text, required: true, description: "쉼표와 한 칸으로 나눈다. 제1저자 앞에 ¹, 교신저자 앞에 * 를 붙인다." }
           - { name: jcr, label: JCR 상위 %, type: string, description: "예: 24.1%. 없으면 비운다." }
-          - { name: url, label: 링크, type: string, description: "논문 페이지 주소. 없으면 비운다." }
+          - { name: url, label: 링크, type: string, description: "논문 페이지 주소. 특허는 https://doi.org/10.8080/ 뒤에 출원번호 숫자 13자리를 붙인다(KIPRIS로 연결). 없으면 비운다." }

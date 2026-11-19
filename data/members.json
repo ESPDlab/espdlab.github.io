@@ -90,14 +90,15 @@
       "roleKo": "석사과정",
       "roleEn": "M.S. Student",
       "interests": "diagnosis and prognostics of power cable, signal processing techniques, HFCT Sensor",
-      "email": "cccchyeon93@gmail.com",
+      "email": "cccchyeon93@gmail.com, ch@grid-cure.com",
       "photo": "/media/people/chang-hyeon-hong.jpg",
       "career": [
         "M.S. student in Energy Systems Engineering, CAU (2026.03 ~)",
-        "Associate, GridCure (2023.07 ~) · ch@grid-cure.com",
+        "Associate, GridCure (2023.07 ~)",
         "B.S. in Department of Electrical Engineering, HBNU (2024.02)"
       ],
       "publications": [
+        "홍창현, 홍동석, 정재철, 권구영, 이춘권, 장승진, \"해저케이블 계통용 154 kV 가스절연 종단접속함의 유전손실 변화에 따른 외부 온도 응답 해석\", 전기학회논문지, Sep. 2026.",
         "Chang Hyeon Hong, Yeon-Sub Sim, Hyun-Mo Seong, Gu-Young Kwon, Chun-Kwon Lee, Seung Jin Chang, \"Development of a Multiple HFCT-Based Reflectometry System for Live Cable Diagnosis\", 2024 IEEE International Instrumentation and Measurement Technology Conference (I2MTC), May. 2025."
       ],
       "projects": [
