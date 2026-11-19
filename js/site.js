@@ -84,6 +84,9 @@
     d.scrollTop = 0;
     const strip = d.querySelector('.strip');
     if (strip) strip.scrollLeft = 0;
+    // 연구 카드의 영상(.xvideo)은 열면 바로 재생한다. 소리가 없고(muted) 끝나면 처음부터 다시 돈다(loop). 닫히면 아래 close 처리에서 멈춘다.
+    // 사람이 카드를 눌러서 시작하는 움직임이라 "움직임 줄이기"를 켠 PC에서도 재생한다. 소식 카드의 영상은 소리가 있어서 자동으로 틀지 않는다.
+    d.querySelectorAll('.xvideo video').forEach((v) => { const p = v.play(); if (p && p.catch) p.catch(() => {}); });
   }
 
   // 시트 안에서 글을 긁다가 바깥에서 손을 떼도 닫히지 않게, 누르기 시작한 곳이 바깥이었는지 적어 둔다.
