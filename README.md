@@ -61,8 +61,11 @@ media/    사진, 로고, 영상, 첫 화면 그림
           news/(소식 사진·영상) · thumb/(목록용 작은 사진) · people/ · logos/ · research/ · video/
           logo-white.svg(상단 로고) · hero.jpg, hero-lit.jpg(첫 화면) · og.jpg(링크 미리보기)
 .pages.yml   Pages CMS 입력 화면 설정
+_config.yml  홈페이지 주소로 열리지 않게 할 파일 목록(이 README, tools/). 저장소에는 그대로 있다
 tools/    make_thumbs.py(목록용 작은 사진 만들기) · gen_art.py(첫 화면 그림 다시 그리기). 사이트 동작에는 필요 없음
 ```
+
+`README.md`, `tools/`, `.pages.yml`, `_config.yml` 은 저장소에서만 보이고 홈페이지 주소로는 열리지 않습니다. 이름이 밑줄(`_`)로 시작하는 파일이나 폴더도 공개되지 않으니, 사진이나 폴더 이름을 밑줄로 시작하지 않습니다.
 
 ## 내 PC에서 미리 보기
 
